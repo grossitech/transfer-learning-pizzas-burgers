@@ -15,6 +15,22 @@ Este repositório é originado do projeto final do Módulo 2 da **[Formação Ma
 
 ---
 
+## 📂 Conteúdo do Repositório
+
+A estrutura de arquivos e pastas do projeto está organizada da seguinte forma:
+
+* `📁 dataset_pizza_burger/`: Pasta principal que contém o dataset de imagens customizado. Sua estrutura interna, pronta para ser lida por frameworks como o PyTorch, é:
+    * `📁 training/`: Contém as imagens para o **treinamento** do modelo.
+        * `📁 burger/`
+        * `📁 pizza/`
+    * `📁 validation/`: Contém as imagens para a **validação** do modelo em cada época.
+        * `📁 burger/`
+        * `📁 pizza/`
+* `📄 transfer_learning_pizzas_burgers.ipynb`: O notebook principal do projeto, desenvolvido para o Google Colab. Contém todo o código, desde a preparação dos dados até o treinamento e a predição.
+* `📄 transfer_learning_pizzas_hamburgueres.py`: Um script Python, versão exportada do notebook, para execução em ambientes que não usam notebooks.
+
+---
+
 ## 🚀 Tecnologias Utilizadas
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
