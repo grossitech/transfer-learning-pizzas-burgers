@@ -81,8 +81,8 @@ O modelo treinado alcançou uma acurácia final de **95.31%** no conjunto de val
         ```
 
 3.  **Execute no Google Colab:**
-    * Abra o arquivo `nome_do_seu_notebook.ipynb` no Google Colab.
-    * **Importante:** Altere as variáveis `train_path` e `validation_path` na Célula 2 para o caminho correto do seu dataset no seu Google Drive.
+    * Abra o arquivo `transfer_learning_pizzas_burgers.ipynb` no Google Colab.
+    * **Importante:** Altere as variáveis `train_path` e `validation_path` na Célula 2 para o caminho correto do seu dataset no **seu** Google Drive.
     * Certifique-se de que o ambiente de execução está configurado para usar **GPU** (`Ambiente de execução > Alterar o tipo de ambiente de execução`).
     * Execute as células em ordem.
 
