@@ -1,74 +1,76 @@
 # Transfer Learning: Pizzas vs Burgers 🍕🍔
 
-![Curso](https://img.shields.io/badge/Curso-Forma%C3%A7%C3%A3o%20Machine%20Learning%20Specialist-blue)
-![Linguagem](https://img.shields.io/badge/Linguagem-Python-yellow.svg)
+![Course](https://img.shields.io/badge/Course-Machine%20Learning%20Specialist%20Track-blue)
+![Language](https://img.shields.io/badge/Language-Python-yellow.svg)
 ![Framework](https://img.shields.io/badge/Framework-PyTorch-orange.svg)
-![Ambiente](https://img.shields.io/badge/Ambiente-Google%20Colab-lightgrey.svg)
+![Environment](https://img.shields.io/badge/Environment-Google%20Colab-lightgrey.svg)
 
 ---
 
-## 📖 Sobre o Projeto
+## 📖 About the Project
 
-O objetivo é aplicar a técnica de **Transfer Learning** para construir um classificador de imagens de alta performance. O modelo foi treinado para diferenciar duas classes de alimentos: pizzas e hambúrgueres, utilizando um dataset personalizado.
+The goal of this project is to apply the **Transfer Learning** technique to build a high-performance image classifier. The model was trained to differentiate between two classes of food: pizzas and burgers, using a custom dataset.
 
-Este repositório é originado do projeto final do Módulo 2 da **[Formação Machine Learning Specialist](https://www.dio.me/curso-machine-learning)** da [Dio.me](https://www.dio.me/).
+This repository originates from the final project of Module 2 of the **[Machine Learning Specialist Track](https://www.dio.me/curso-machine-learning)** from [Dio.me](https://www.dio.me/).
+
+Para versão em Português: [clica aqui](./README.ptbr.md).
 
 ---
 
-## 📂 Conteúdo do Repositório
+## 📂 Repository Contents
 
-A estrutura de arquivos e pastas do projeto está organizada da seguinte forma:
+The project's file and folder structure is organized as follows:
 
-* `📁 dataset_pizza_burger/`: Pasta principal que contém o dataset de imagens customizado. Sua estrutura interna, pronta para ser lida por frameworks como o PyTorch, é:
-    * `📁 training/`: Contém as imagens para o **treinamento** do modelo.
+* `📁 dataset_pizza_burger/`: The main folder containing the custom image dataset. Its internal structure, ready to be read by frameworks like PyTorch, is:
+    * `📁 training/`: Contains the images for **training** the model.
         * `📁 burger/`
         * `📁 pizza/`
-    * `📁 validation/`: Contém as imagens para a **validação** do modelo em cada época.
+    * `📁 validation/`: Contains the images for **validating** the model during each epoch.
         * `📁 burger/`
         * `📁 pizza/`
-* `📄 transfer_learning_pizzas_burgers.ipynb`: O notebook principal do projeto, desenvolvido para o Google Colab. Contém todo o código, desde a preparação dos dados até o treinamento e a predição.
-* `📄 transfer_learning_pizzas_hamburgueres.py`: Um script Python, versão exportada do notebook, para execução em ambientes que não usam notebooks.
+* `📄 transfer_learning_pizzas_burgers.ipynb`: The main project notebook, developed for Google Colab. It contains all the code, from data preparation to training and prediction.
+* `📄 transfer_learning_pizzas_hamburgueres.py`: A Python script, an exported version of the notebook, for execution in non-notebook environments.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+This project was developed using the following technologies:
 
-* **Linguagem:** Python 3
-* **Ambiente de Execução:** Google Colab
-* **Framework de Deep Learning:** PyTorch
-* **Bibliotecas Principais:**
-    * `torchvision`: para modelos pré-treinados e transformações de imagem.
-    * `Pillow`: para manipulação de imagens.
-    * `requests`: para carregar imagens da internet para predição.
-    * `Matplotlib` (implícito): para visualização de dados.
-
----
-
-## 🛠️ Metodologia
-
-O projeto seguiu as etapas clássicas de um pipeline de Visão Computacional com Transfer Learning:
-
-1.  **Preparação dos Dados:** Um dataset personalizado com imagens de pizzas e hambúrgueres foi coletado e organizado em uma estrutura de pastas para treino e validação. Foram aplicadas transformações (`transforms`) para redimensionar, cortar e normalizar as imagens.
-
-2.  **Carregamento do Modelo:** Foi utilizado o modelo **ResNet18**, pré-treinado no gigantesco dataset ImageNet, aproveitando seu conhecimento prévio sobre características visuais universais.
-
-3.  **Transfer Learning (Ajuste Fino):**
-    * As camadas convolucionais (extratoras de características) do modelo foram "congeladas".
-    * A camada de classificação final, originalmente projetada para 1000 classes, foi substituída por uma nova camada com apenas 2 saídas (pizza e hambúrguer).
-
-4.  **Treinamento:** Apenas a nova camada de classificação foi treinada com o nosso dataset. Essa abordagem reduz drasticamente o custo computacional e o tempo de treinamento, além de evitar overfitting em datasets menores.
-
-5.  **Validação e Predição:** O modelo foi validado a cada época para monitorar a acurácia e a perda em dados não vistos. Ao final, uma função de predição foi criada para classificar novas imagens da internet.
+* **Language:** Python 3
+* **Execution Environment:** Google Colab
+* **Deep Learning Framework:** PyTorch
+* **Main Libraries:**
+    * `torchvision`: for pre-trained models and image transformations.
+    * `Pillow`: for image manipulation.
+    * `requests`: to load images from the internet for prediction.
+    * `Matplotlib` (implicit): for data visualization.
 
 ---
 
-## 📈 Resultados
+## 🛠️ Methodology
 
-O modelo treinado alcançou uma acurácia final de **95.31%** no conjunto de validação, demonstrando alta capacidade de generalização para diferenciar as duas classes com sucesso.
+The project followed the classic steps of a Computer Vision pipeline with Transfer Learning:
 
-**Exemplo de Predição em uma nova imagem:**
+1.  **Data Preparation:** A custom dataset with images of pizzas and burgers was collected and organized into a folder structure for training and validation. Transformations (`transforms`) were applied to resize, crop, and normalize the images.
+
+2.  **Model Loading:** The **ResNet18** model, pre-trained on the massive ImageNet dataset, was used, leveraging its prior knowledge of universal visual features.
+
+3.  **Transfer Learning (Fine-Tuning):**
+    * The convolutional (feature-extracting) layers of the model were "frozen".
+    * The final classification layer, originally designed for 1000 classes, was replaced with a new layer with only 2 outputs (pizza and burger).
+
+4.  **Training:** Only the new classification layer was trained with our dataset. This approach drastically reduces computational cost and training time, in addition to preventing overfitting on smaller datasets.
+
+5.  **Validation and Prediction:** The model was validated at each epoch to monitor accuracy and loss on unseen data. Finally, a prediction function was created to classify new images from the internet.
+
+---
+
+## 📈 Results
+
+The trained model achieved a final accuracy of **95.31%** on the validation set, demonstrating a high generalization capability to successfully differentiate between the two classes.
+
+**Example of a prediction on a new image:**
 
 `Testing image from: https://i.imgur.com/eeDDFhu.jpeg`<BR>
 `Prediction: The image is a: pizza`<BR>
@@ -76,35 +78,35 @@ O modelo treinado alcançou uma acurácia final de **95.31%** no conjunto de val
 
 ---
 
-## ⚙️ Como Executar o Projeto
+## ⚙️ How to Run the Project
 
-1.  **Clone o repositório:**
+1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/grossitech/transfer-learning-pizzas-burgers.git](https://github.com/grossitech/transfer-learning-pizzas-burgers.git)
     ```
 
-2.  **Prepare o Dataset:**
-    * Crie seu próprio dataset ou utilize o [/dataset_pizza_burger](./dataset_pizza_burger) que deixei aqui no repositório.
-    * Organize as imagens na seguinte estrutura de pastas e **faça o upload para o seu Google Drive**:
+2.  **Prepare the Dataset:**
+    * Create your own dataset or use the one provided in [/dataset_pizza_burger](./dataset_pizza_burger) here in the repository.
+    * Organize the images in the following folder structure and **upload it to your Google Drive**:
         ```
-        /meu_dataset
-            /treino
+        /my_dataset
+            /train
                 /pizza
-                /hamburguer
-            /validacao
+                /hamburger
+            /validation
                 /pizza
-                /hamburguer
+                /hamburger
         ```
 
-3.  **Execute no Google Colab:**
-    * Abra o arquivo `transfer_learning_pizzas_burgers.ipynb` no Google Colab.
-    * **Importante:** Altere as variáveis `train_path` e `validation_path` na Célula 2 para o caminho correto do seu dataset no **seu** Google Drive.
-    * Certifique-se de que o ambiente de execução está configurado para usar **GPU** (`Ambiente de execução > Alterar o tipo de ambiente de execução`).
-    * Execute as células em ordem.
+3.  **Run in Google Colab:**
+    * Open the `transfer_learning_pizzas_burgers.ipynb` file in Google Colab.
+    * **Important:** Change the `train_path` and `validation_path` variables in Cell 2 to the correct path of the dataset on **your** Google Drive.
+    * Ensure the runtime environment is configured to use a **GPU** (`Runtime > Change runtime type`).
+    * Run the cells in order.
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
 <img 
   align=left 
@@ -121,6 +123,6 @@ O modelo treinado alcançou uma acurácia final de **95.31%** no conjunto de val
 
 ---
 
-## 📜 Licença
+## 📜 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is under the MIT License. See the [LICENSE](LICENSE) file for more details.
