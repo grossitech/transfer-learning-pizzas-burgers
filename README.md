@@ -9,9 +9,9 @@
 
 ## 📖 Sobre o Projeto
 
-Este repositório contém o projeto final do Módulo 2 da **[Formação Machine Learning Specialist](https://www.dio.me/curso-machine-learning)** da [Dio.me](https://www.dio.me/).
-
 O objetivo é aplicar a técnica de **Transfer Learning** para construir um classificador de imagens de alta performance. O modelo foi treinado para diferenciar duas classes de alimentos: pizzas e hambúrgueres, utilizando um dataset personalizado.
+
+Este repositório é originado do projeto final do Módulo 2 da **[Formação Machine Learning Specialist](https://www.dio.me/curso-machine-learning)** da [Dio.me](https://www.dio.me/).
 
 ---
 
@@ -68,7 +68,7 @@ O modelo treinado alcançou uma acurácia final de **95.31%** no conjunto de val
     ```
 
 2.  **Prepare o Dataset:**
-    * Crie seu próprio dataset ou utilize o [dataset_pizza_burger](./dataset_pizza_burger) aqui no repositório.
+    * Crie seu próprio dataset ou utilize o [/dataset_pizza_burger](./dataset_pizza_burger) que deixei aqui no repositório.
     * Organize as imagens na seguinte estrutura de pastas e **faça o upload para o seu Google Drive**:
         ```
         /meu_dataset
